@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Оценка моделей сегментации</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Оценка качества работы моделей</h1>
+
+<p>
+    В этом опросе представлены результаты работы трёх моделей сегментации
+    (side-by-side с оригиналом).  
+    Пожалуйста, оцените качество каждой модели по следующим критериям:
+</p>
+
+<ul>
+    <li><b>Качество масок</b></li>
+    <li><b>Корректное количество объектов (куриц)</b></li>
+</ul>
+
+<div class="images-container">
+    <div class="img-block">
+        <h3>Оригинал</h3>
+        <img src="images/original.png" alt="original">
+    </div>
+
+    <div class="img-block">
+        <h3>Модель 1</h3>
+        <img src="images/model1.png" alt="model1">
+
+        <label>Оценка (1–5)</label>
+        <select id="score_model1">
+            <option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="img-block">
+        <h3>Модель 2</h3>
+        <img src="images/model2.png" alt="model2">
+
+        <label>Оценка (1–5)</label>
+        <select id="score_model2">
+            <option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="img-block">
+        <h3>Модель 3</h3>
+        <img src="images/model3.png" alt="model3">
+
+        <label>Оценка (1–5)</label>
+        <select id="score_model3">
+            <option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </div>
+</div>
+
+<button id="submitBtn">Отправить</button>
+
+<p id="status"></p>
+
+<script>
+// <--- ВСТАВЬ СВОЙ WEBHOOK URL ТУТ --->
+const GOOGLE_WEBHOOK = "PASTE_WEBHOOK_URL_HERE";
+
+
+document.getElementById("submitBtn").onclick = async () => {
+    const data = {
+        model1: document.getElementById("score_model1").value,
+        model2: document.getElementById("score_model2").value,
+        model3: document.getElementById("score_model3").value
+    };
+
+    document.getElementById("status").innerText = "Отправка...";
+
+    try {
+        await fetch(GOOGLE_WEBHOOK, {
+            method: "POST",
+            body: JSON.stringify(data),
+        });
+
+        document.getElementById("status").innerText = "Ответ сохранён! Спасибо!";
+    } catch (e) {
+        document.getElementById("status").innerText = "Ошибка отправки.";
+    }
+};
+</script>
+
+</body>
+</html>
