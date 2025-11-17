@@ -10,86 +10,191 @@
 <h1>Оценка качества работы моделей</h1>
 
 <p>
-    В этом опросе представлены результаты работы трёх моделей сегментации
-    (side-by-side с оригиналом).  
-    Пожалуйста, оцените качество каждой модели по следующим критериям:
+    Ниже представлены 3 сэмпла изображений.  
+    В каждом блоке находятся:
 </p>
 
 <ul>
-    <li><b>Качество масок</b></li>
-    <li><b>Корректное количество объектов (куриц)</b></li>
+    <li>оригинал изображения</li>
+    <li>3 результата работы моделей</li>
+    <li>оценка качества каждой модели (1–5)</li>
 </ul>
 
-<div class="images-container">
-    <div class="img-block">
-        <h3>Оригинал</h3>
-        <img src="images/original.png" alt="original">
+<p>
+    Критерии оценки:
+    <br>1. <b>Качество масок</b>  
+    2. <b>Корректное количество объектов (куриц)</b>
+</p>
+
+<hr>
+
+<!-- ===== SAMPLE TEMPLATE ===== -->
+
+<div id="samples-container">
+
+    <!-- SAMPLE 1 -->
+    <div class="sample-block">
+        <h2>Сэмпл 1</h2>
+
+        <div class="images-row">
+            <div>
+                <h3>Оригинал</h3>
+                <img src="images/sample1_original.png">
+            </div>
+            <div>
+                <h3>Модель 1</h3>
+                <img src="images/sample1_model1.png">
+                <label>Оценка</label>
+                <select id="s1_m1">
+                    <option>1</option><option>2</option><option selected>3</option>
+                    <option>4</option><option>5</option>
+                </select>
+            </div>
+            <div>
+                <h3>Модель 2</h3>
+                <img src="images/sample1_model2.png">
+                <label>Оценка</label>
+                <select id="s1_m2">
+                    <option>1</option><option>2</option><option selected>3</option>
+                    <option>4</option><option>5</option>
+                </select>
+            </div>
+            <div>
+                <h3>Модель 3</h3>
+                <img src="images/sample1_model3.png">
+                <label>Оценка</label>
+                <select id="s1_m3">
+                    <option>1</option><option>2</option><option selected>3</option>
+                    <option>4</option><option>5</option>
+                </select>
+            </div>
+        </div>
     </div>
 
-    <div class="img-block">
-        <h3>Модель 1</h3>
-        <img src="images/model1.png" alt="model1">
+    <hr>
 
-        <label>Оценка (1–5)</label>
-        <select id="score_model1">
-            <option value="1">1</option><option value="2">2</option>
-            <option value="3">3</option><option value="4">4</option>
-            <option value="5">5</option>
-        </select>
+    <!-- SAMPLE 2 -->
+    <div class="sample-block">
+        <h2>Сэмпл 2</h2>
+
+        <div class="images-row">
+            <div>
+                <h3>Оригинал</h3>
+                <img src="images/sample2_original.png">
+            </div>
+            <div>
+                <h3>Модель 1</h3>
+                <img src="images/sample2_model1.png">
+                <label>Оценка</label>
+                <select id="s2_m1">
+                    <option>1</option><option>2</option><option selected>3</option>
+                    <option>4</option><option>5</option>
+                </select>
+            </div>
+            <div>
+                <h3>Модель 2</h3>
+                <img src="images/sample2_model2.png">
+                <label>Оценка</label>
+                <select id="s2_m2">
+                    <option>1</option><option>2</option><option selected>3</option>
+                    <option>4</option><option>5</option>
+                </select>
+            </div>
+            <div>
+                <h3>Модель 3</h3>
+                <img src="images/sample2_model3.png">
+                <label>Оценка</label>
+                <select id="s2_m3">
+                    <option>1</option><option>2</option><option selected>3</option>
+                    <option>4</option><option>5</option>
+                </select>
+            </div>
+        </div>
     </div>
 
-    <div class="img-block">
-        <h3>Модель 2</h3>
-        <img src="images/model2.png" alt="model2">
+    <hr>
 
-        <label>Оценка (1–5)</label>
-        <select id="score_model2">
-            <option value="1">1</option><option value="2">2</option>
-            <option value="3">3</option><option value="4">4</option>
-            <option value="5">5</option>
-        </select>
+    <!-- SAMPLE 3 -->
+    <div class="sample-block">
+        <h2>Сэмпл 3</h2>
+
+        <div class="images-row">
+            <div>
+                <h3>Оригинал</h3>
+                <img src="images/sample3_original.png">
+            </div>
+            <div>
+                <h3>Модель 1</h3>
+                <img src="images/sample3_model1.png">
+                <label>Оценка</label>
+                <select id="s3_m1">
+                    <option>1</option><option>2</option><option selected>3</option>
+                    <option>4</option><option>5</option>
+                </select>
+            </div>
+            <div>
+                <h3>Модель 2</h3>
+                <img src="images/sample3_model2.png">
+                <label>Оценка</label>
+                <select id="s3_m2">
+                    <option>1</option><option>2</option><option selected>3</option>
+                    <option>4</option><option>5</option>
+                </select>
+            </div>
+            <div>
+                <h3>Модель 3</h3>
+                <img src="images/sample3_model3.png">
+                <label>Оценка</label>
+                <select id="s3_m3">
+                    <option>1</option><option>2</option><option selected>3</option>
+                    <option>4</option><option>5</option>
+                </select>
+            </div>
+        </div>
     </div>
 
-    <div class="img-block">
-        <h3>Модель 3</h3>
-        <img src="images/model3.png" alt="model3">
-
-        <label>Оценка (1–5)</label>
-        <select id="score_model3">
-            <option value="1">1</option><option value="2">2</option>
-            <option value="3">3</option><option value="4">4</option>
-            <option value="5">5</option>
-        </select>
-    </div>
 </div>
 
-<button id="submitBtn">Отправить</button>
+<hr>
 
+<button id="submitBtn">Отправить</button>
 <p id="status"></p>
 
 <script>
-// <--- ВСТАВЬ СВОЙ WEBHOOK URL ТУТ --->
+// ⬇⬇ ВСТАВЬ СВОЙ WEBHOOK URL (Google Script) ⬇⬇
 const GOOGLE_WEBHOOK = "PASTE_WEBHOOK_URL_HERE";
 
-
 document.getElementById("submitBtn").onclick = async () => {
-    const data = {
-        model1: document.getElementById("score_model1").value,
-        model2: document.getElementById("score_model2").value,
-        model3: document.getElementById("score_model3").value
+
+    const payload = {
+        sample1: {
+            model1: s1_m1.value,
+            model2: s1_m2.value,
+            model3: s1_m3.value,
+        },
+        sample2: {
+            model1: s2_m1.value,
+            model2: s2_m2.value,
+            model3: s2_m3.value,
+        },
+        sample3: {
+            model1: s3_m1.value,
+            model2: s3_m2.value,
+            model3: s3_m3.value,
+        }
     };
 
-    document.getElementById("status").innerText = "Отправка...";
+    status.innerText = "Отправка...";
 
     try {
         await fetch(GOOGLE_WEBHOOK, {
             method: "POST",
-            body: JSON.stringify(data),
+            body: JSON.stringify(payload),
         });
 
-        document.getElementById("status").innerText = "Ответ сохранён! Спасибо!";
-    } catch (e) {
-        document.getElementById("status").innerText = "Ошибка отправки.";
+        status.innerText = "Ответ сохранён! Спасибо!";
+    } catch {
+        status.innerText = "Ошибка отправки.";
     }
 };
 </script>
