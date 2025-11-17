@@ -1,37 +1,46 @@
 body {
     font-family: Arial, sans-serif;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: auto;
     padding: 20px;
 }
 
-h1, h3 {
+h1, h2, h3 {
     text-align: center;
 }
 
-.images-container {
+.sample-block {
+    margin-bottom: 40px;
+}
+
+.images-row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 25px;
-    margin-top: 30px;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin-top: 20px;
 }
 
-.img-block {
-    width: 30%;
-    min-width: 280px;
+.images-row div {
+    width: 22%;
+    min-width: 220px;
     text-align: center;
 }
 
-.img-block img {
-    max-width: 100%;
+.images-row img {
+    width: 100%;
     border-radius: 8px;
     border: 1px solid #ccc;
 }
 
+label {
+    display: block;
+    margin-top: 10px;
+}
+
 button {
     display: block;
-    margin: 40px auto;
+    margin: 30px auto;
     padding: 12px 25px;
     font-size: 18px;
     cursor: pointer;
