@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1, h3 {
+    text-align: center;
+}
+
+.images-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.img-block {
+    width: 30%;
+    min-width: 280px;
+    text-align: center;
+}
+
+.img-block img {
+    max-width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    display: block;
+    margin: 40px auto;
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#status {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
